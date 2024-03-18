@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "Tab URL to TXT",
+    "version": "1.0",
+
+    "description": "Collects all open tab urls and saves to a list, optionally downloads all tabs that are just images",
+    "content_scripts": [
+        {
+            "matches": ["*://*/*.jpg", "*://*/*.jpeg", "*://*/*.pdf"],
+            "js": ["geturls.js"]
+        }
+    ], 
+    "permissions": [
+        "tabs", "downloads"
+    ]
+}
